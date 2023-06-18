@@ -8,7 +8,7 @@ const Home = () => {
     const HandleClick = () => {
         const trimmedCity = city.trim();
         if(trimmedCity !== ''){ 
-            const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${trimmedCity}&appid=2cd34a21e7131e0e08b70423a4536ee6&units=metric`;
+            const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${trimmedCity}&appid={YOUR_API_KEY}&units=metric`;
             axios.get(apiURL)
             .then(response => {
                 let iconweather ='';
@@ -57,7 +57,7 @@ const Home = () => {
 
     }
     if(city === ''){ 
-        const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=agadir&appid=2cd34a21e7131e0e08b70423a4536ee6&units=metric`;
+        const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=agadir&appid={YOUR_API_KEY}&units=metric`;
         axios.get(apiURL)
         .then(response => {
             let iconweather ='';
